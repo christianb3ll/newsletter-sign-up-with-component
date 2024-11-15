@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script src="assets/js/common.js" defer ></script>
+
+  <title>Newsletter sign-up form</title>
+
+</head>
+<body>
+
+  
+  <main>
+    <article id="popup-window" class="newsletter-popup">
+
+      <div class="newsletter-signup">
+        <picture class="newsletter-image">
+          <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width:600px)">
+          <img src="assets/images/illustration-sign-up-mobile.svg" alt="Newsletter signup illustration">
+        </picture>
+        <div class="newsletter-popup-body">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+          <form id="signup-form">
+            <div class="form-item">
+              <label id="email-error" class="error-label hidden" for="email">Valid email required</label>
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="email@company.com" required />
+            </div>
+        
+            <button formaction="submit">
+              Subscribe to monthly newsletter
+            </button>
+        
+          </form>
+        </div>
+      </div>
+    </article>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.christian-bell.com/">Christian Bell</a>.
+    </div>
+  </footer>
+
+
+  <article id="popup-window-success" class="newsletter-popup popup-success hidden">
+    <div class="newsletter-signup-success">
+      <section class="popup-success-body">
+        <img class="success-image" src="assets/images/icon-success.svg" alt="Success Icon">
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to <span id="email-success-text">ash@loremcompany.com</span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+      </section>
+    
+      <footer class="popup-success-footer">
+        <button id="dismiss-button" class="dismiss-button">Dismiss message</button>
+      </footer>
+    </div>
+  </article>
+
+</body>
+</html>
